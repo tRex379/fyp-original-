@@ -1,0 +1,112 @@
+*{
+	outline:0;
+}
+.custom-navbar
+{
+	background-color:white;
+}
+
+#email_error,#password_error,#error_name,#error_ic,#error_phone,#error_email,#error_password,#error_confirm_password{
+	color:#F2220D;
+}
+
+#ic_rule,#phone_rule,#email_rule,#password_rule,#confirm_password_rule{
+	color:white;
+}
+
+.tab-content input[type=email],.tab-content input[type=password],.tab-content input[type=text],.tab-content input[type=telephone]
+{
+	color:white;
+}
+
+.tab-content input[type=button]
+{
+	background-color:#ce3232;
+	border-radius:30px;
+	color:white;
+}
+
+.tab-content button[type=submit]
+{
+	background-color:#ce3232;
+	border-radius:30px;
+	color:white;
+}
+
+.dropdown
+{
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.custom-navbar .nav .section-btn a
+{
+	color:white;
+}
+
+#contact p,h3
+{
+	color:black;
+}
+
+#schedule{
+	padding:0px;
+}
+
+#contact_content{
+	text-align:left;
+}
+
+#contact_phone,#contact_location,#contact_email{
+	margin-top:10px;
+}
+
+#contact_phone_details,#contact_location_details,#contact_email_details{
+	margin-left:20px;
+}
+
+#contact_header{
+	line-height:3.2em;
+}
+
+#message	
+{
+	text-align:left;
+}
+
+#menu a:hover,footer a:hover{
+	color:#ce3232;
+}
+
+#user_name,#user_email_address,#user_message
+{
+	margin-top:20px;
+}
+
+input[type="text"],input[type="email"],textarea
+{
+	padding:10px;
+}
+
+#message input[type="submit"]
+{
+	margin-top:10px;
+	padding:15px;
+	border-radius:10px;
+	border:0;
+	background-color:black;
+	color:white;
+}
+
+#message input[type="submit"]:hover
+{
+	color:black;
+	background-color:white;
+	border-color:black;
+	border:2px solid;
+}
+
+footer{
+	margin-top:0;
+	padding:20px;
+}
