@@ -132,7 +132,7 @@
 	 <div class="row">
 		<h1>PT3 and SPM Timetable</h1>
 			<div id="scheduleTable" class="col-md-12">
-				<?php include('schedule.php');?>
+				<?php include('test.php');?>
 			</div>
 			</div>
 			</div>

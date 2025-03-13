@@ -392,6 +392,8 @@ th{
 	}
 	}
 	}
+	
+	
 	else{
 	?>
 		<div id='student_info' class='col-md-12'> ----------------- There was no student need to pay ------------------------- </div>

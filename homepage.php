@@ -179,7 +179,6 @@
 							}?>
 							</div>
 						</div>
-						
 					<div id="SPM_image" class="col-md-6 col-md-pull-2">
 						<img src="images/SPM.png" height=100px width=100px class="col-md-3 col-md-offset-6" />
 							<div id="subjects" class="col-md-offset-5 col-md-5"><h3>SPM</h3>

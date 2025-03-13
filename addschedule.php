@@ -91,7 +91,7 @@ http://www.templatemo.com/preview/templatemo_415_dashboard
 			  <button class="btn btn-primary" style="margin-bottom:15px;" onclick="location.href = 'addschedule1.php'">Form View</button>
 			  <button class="btn btn-info" style="margin-bottom:15px;margin-left:5px;" name="print" id="print" >Print Schedule</button>
 			  </div>
-                <?php include('schedule.php');?>
+                <?php include('test.php');?>
            </div>
                 </div>
               </div>

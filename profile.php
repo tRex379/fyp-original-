@@ -133,36 +133,37 @@ input[type=button]
 </style>
 <body>
 	<?php include('profile_menu.php'); ?>
-	<?php $result_student=mysqli_query($conn,"select * from student where parent_id_fk='$parent_id' and isdeleted='0'");?>
-	 <section id="parent">
-	 <div class="container">
-	 <div class="row">
-	<div id="parent_details" class="col-md-8 col-md-offset-2">
-	<div class="col-md-12">
-		<p>Unbarred Status : <img src="images/success.png"  width="20px" height="20px"/> &nbsp;&nbsp;&nbsp; Barred Status : <img src="images/pending.png" width="20px" height="20px"/> &nbsp;&nbsp;&nbsp; Blocked Status : <img src="images/fail.jpg" width="20px" height="20px"/> </p>
-	</div>
-	<h3 id="parent_info" class="col-md-12">Parent Info</h3>
-			<form>
-				<div id="parent_name" class="col-md-6 parent">Name : <span id="parent_name"><?php echo $row_parent['parent_name']; ?></span></div>
-				<div id="parent_ic" class="col-md-6 parent">IC : <span id="parent_ic"><?php echo $row_parent['parent_ic'] ?></span></div>
-				<div id="parent_email" class="col-md-6 parent">Email : <span id="parent_email"><?php echo $row_parent['parent_email'] ?></span></div>
-				<div id="parent_hp" class="col-md-6 parent">H/P : <span id="parent_hp"><?php echo $row_parent['parent_contact_num'] ?></span></div>
-				<div id="parent_barred_status" class="col-md-12 parent">Barred Status : <span id="parent_barred_status">   
-				<?php 
-				if($row_parent['barred_status']=="unbarred"){
-					echo '<img src="images/success.png"  width="20px" height="20px"/>';
-				}
-				else if($row_parent['barred_status']=="barred"){
-					echo '<img src="images/pending.png" width="20px" height="20px"/>';
-				}
-				else if($row_parent['barred_status']=="blocked"){
-					echo '<img src="images/fail.jpg" width="20px" height="20px"/>';
-				}
-				?>
-				</span></div>
-				<span class="col-md-2"><a href="profile_edit.php"><input type="button" id="edit_parent_profile" value="Edit Info" /></a></span>
-				<span class="col-md-2"><a href="payment.php"><input type="button" class="paymentbtn" value="Payment" /></a></span>
-			</form>
+	<?php $result_student = mysqli_query($conn,"select * from student where parent_id_fk='$parent_id' and isdeleted='0'");?>
+	<section id="parent">
+		<div class="container">
+		<div class="row">
+			<div id="parent_details" class="col-md-8 col-md-offset-2">
+			<div class="col-md-12">
+				<p>Unbarred Status : <img src="images/success.png"  width="20px" height="20px"/> &nbsp;&nbsp;&nbsp; Barred Status : <img src="images/pending.png" width="20px" height="20px"/> &nbsp;&nbsp;&nbsp; Blocked Status : <img src="images/fail.jpg" width="20px" height="20px"/> </p>
+			</div>
+			<h3 id="parent_info" class="col-md-12">Parent Info</h3>
+				<form>
+					<div id="parent_name" class="col-md-6 parent">Name : <span id="parent_name"><?php echo $row_parent['parent_name']; ?></span></div>
+					<div id="parent_ic" class="col-md-6 parent">IC : <span id="parent_ic"><?php echo $row_parent['parent_ic'] ?></span></div>
+					<div id="parent_email" class="col-md-6 parent">Email : <span id="parent_email"><?php echo $row_parent['parent_email'] ?></span></div>
+					<div id="parent_hp" class="col-md-6 parent">H/P : <span id="parent_hp"><?php echo $row_parent['parent_contact_num'] ?></span></div>
+					<div id="parent_barred_status" class="col-md-12 parent">Barred Status : <span id="parent_barred_status">   
+					<?php 
+					if($row_parent['barred_status']=="unbarred"){
+						echo '<img src="images/success.png"  width="20px" height="20px"/>';
+					}
+					else if($row_parent['barred_status']=="barred"){
+						echo '<img src="images/pending.png" width="20px" height="20px"/>';
+					}
+					else if($row_parent['barred_status']=="blocked"){
+						echo '<img src="images/fail.jpg" width="20px" height="20px"/>';
+					}
+					?>
+					</span>
+					</div>
+					<span class="col-md-2"><a href="profile_edit.php"><input type="button" id="edit_parent_profile" value="Edit Info" /></a></span>
+					<span class="col-md-2"><a href="payment.php"><input type="button" class="paymentbtn" value="Payment" /></a></span>
+				</form>
 		<div class="col-md-12 warning">
 			<ul>
 			  <ul class="list-unstyled">
@@ -171,6 +172,7 @@ input[type=button]
 				<li> If parent barred status is yellow , you should pay the payment or else you will be blocked soon.</li>
 				<li> If parent barred status is red , you have been blocked, please make the payment to unbarred.</li>
 			</ul>
+	</div>
 	</div>
 	</div>
 	</div>

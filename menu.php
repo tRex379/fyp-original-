@@ -1,5 +1,4 @@
 <?php
-//Login if the  credential is true
 if(isset($_SESSION['login'])){
 	$parent_id=$_SESSION['parent_id'];
 	$result_parent=mysqli_query($conn,"select * from parent where parent_id='$parent_id'");
@@ -12,14 +11,12 @@ if(isset($_SESSION['login'])){
 	});
 	</script>
 <?php
-	//if parent is 1st time login
 	if($row_parent['parent_first_time']==0){
 	$parent_first_time=1;
 	$parent_id=$_SESSION['parent_id'];
 	mysqli_query($conn,"update parent set parent_first_time='$parent_first_time' where parent_id='$parent_id'");
 	header("Location:profile.php");
 	}
-	
 	$result_payment=mysqli_query($conn,"select * from payment where parent_id_fk ='$parent_id' ORDER BY payment_id DESC");
 	$row_payment=mysqli_fetch_assoc($result_payment); 
 	$payment_month=$row_payment['payment_date'];
@@ -29,25 +26,7 @@ if(isset($_SESSION['login'])){
 	if($curr_month>=$payment_month){
 		mysqli_query($conn,"update parent set parent_payment='unpaid' where parent_id='$parent_id'");
 	}
-	$result_student1=mysqli_query($conn,"select * from student");
-	while($row_student1=mysqli_fetch_assoc($result_student1)){
-	$student_registration_date=$row_student1['student_registration_date'];
-	$student_standard=$row_student1['student_level'];
-	$intake_date=$row_student1['intake_date'];
-	$curr_date=date('Y-m-d');
-	$start=$row_student1['student_registration_date'];
-	$student_end_date=$row_student1['student_end_date'];
-	$student_id=$row_student1['student_id'];
-	if($student_registration_date >= $student_registration_date && $intake_date <= $curr_date){
-		mysqli_query($conn,"update student set activate='1' where student_id='$student_id'");
-	}
-	if($curr_date >= $student_end_date){
-		mysqli_query($conn,"update student set activate='0', isdeleted='1'");
-		mysqli_query($conn,"update schedule set curr_capacity='0' where standard='$student_standard'");
-	}
-	}
 }
-//If the credential is false it will display back the user login form.
 else{
 	?>
 	<script type="text/javascript">
